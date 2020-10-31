@@ -1,0 +1,13 @@
+.li-list-item {
+    border-bottom: 1px solid lightgray;
+    padding: 25px 0;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+.li-item-checkbox {
+    margin: 0 15px 0 0;
+    
+}
