@@ -28,7 +28,7 @@ class LoginForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        if (this.state.email != '' && this.state.password != ''  ) {
+        if (this.state.email !== '' && this.state.password !== ''  ) {
             alert("Successfully loged in! (let's imagine we have backend)")
         } else {
             alert("Please enter correct data")
@@ -38,8 +38,9 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div className='login-form-wrapper'>
+            <p className='form-tip-top'>Прогортай вниз, щоб побачити варіант з Formik</p>
                 <form className='loginForm' onSubmit={this.handleSubmit}>
-                    <h3 className='login-heading'>Sign in to your account</h3>
+                    <h3 className='login-heading'>Sign in to your account (No Formik)</h3>
                     <input className='login-form-input' 
                         onChange={this.handleEmailChange}
                         type='email' 
