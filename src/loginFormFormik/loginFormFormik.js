@@ -28,11 +28,6 @@ class LoginFormFormik extends React.Component {
         })
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        alert("sosi")
-    }
-
     render() {
         return (
                     <Formik
@@ -56,7 +51,7 @@ class LoginFormFormik extends React.Component {
                     >
                     <div className='login-form-wrapper login-form-wrapper-formik'>
                         <p>Прогортай вверх, щоб побачити варіант з Formik</p>
-                        <Form className='loginForm' onSubmit={this.handleSubmit} >
+                        <Form className='loginForm'>
                             <h3 className='login-heading'>Sign in to your account (Formik)</h3>
                             
                             <Field className='login-form-input'
