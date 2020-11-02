@@ -13,7 +13,6 @@ class LoginFormFormik extends React.Component {
 
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleEmailChange(e) {
@@ -50,7 +49,7 @@ class LoginFormFormik extends React.Component {
                         }}
                     >
                     <div className='login-form-wrapper login-form-wrapper-formik'>
-                        <p>Прогортай вверх, щоб побачити варіант з Formik</p>
+                        <p>Прогортай вверх, щоб побачити варіант без Formik</p>
                         <Form className='loginForm'>
                             <h3 className='login-heading'>Sign in to your account (Formik)</h3>
                             
