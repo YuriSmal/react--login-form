@@ -5,31 +5,28 @@ class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: '',
-            password: ''
+            email: null,
+            password: null,
         };
 
-        this.handleEmailChange = this.handleEmailChange.bind(this);
-        this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    handleEmailChange(e) {
-        this.setState({
-            email: e.target.value
-        });
-    }
+    handleInputChange(e) {
+        const target = e.target;
+        const name = target.name;
 
-    handlePasswordChange(e) {
         this.setState({
-            password: e.target.value
+            [name]: target.value
         })
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        if (this.state.email !== '' && this.state.password !== ''  ) {
-            alert("Successfully loged in! (let's imagine we have backend)")
+        if (this.state.email && this.state.password && this.state.email !== '' && this.state.password !== ''  ) {
+            alert("Successfully loged in! (let's imagine we have backend)");
+            console.log(this.state);
         } else {
             alert("Please enter correct data")
         }
@@ -42,13 +39,15 @@ class LoginForm extends React.Component {
                 <form className='loginForm' onSubmit={this.handleSubmit}>
                     <h3 className='login-heading'>Sign in to your account (No Formik)</h3>
                     <input className='login-form-input' 
-                        onChange={this.handleEmailChange}
+                        onChange={this.handleInputChange}
+                        name='email'
                         type='email' 
                         placeholder='Your email' 
                         value={this.state.email}>
                     </input>
                     <input className='login-form-input input-password' 
-                        onChange={this.handlePasswordChange}
+                        onChange={this.handleInputChange}
+                        name='password'
                         type='password' 
                         placeholder='Your password'
                         value={this.state.password}></input>
